@@ -10,7 +10,6 @@
  - Inicialmente criei Docker para desenvolver essa solução apenas de CURD simples.
  - Apliquei Mongodb e Nestjs com Docker, mas o container teve alguns problemas, não forma por conta do mongo e sim do nestjs servidores
 estavam ocupados, alterei para o SQLite para não demorar no DEV.
- - A parte do modulo de conexão como banco não precisa passar urls ou querys urls ficando simples pra rodar a aplicação
 
 ## Requires (Sem Docker)
 

@@ -1,0 +1,30 @@
+version: "2"
+
+services:
+
+  nestjs:
+    build:
+      context: .
+      dockerfile: dockerfile
+    container_name: nestjs
+    volumes:
+      - ./:/home/audaces
+    expose:
+      - "4000"
+    tty: true
+  
+  mongodb:
+    image: mongo:latest
+    hostname: '${MONGO_HOSTNAME}'
+    container_name: db_mongo
+    volumes:
+      - mongodb:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=${MONGO_DATEBASE}
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_PASSWORD}
+    ports:
+      - "27017:27017"
+
+volumes:
+  mongodb:

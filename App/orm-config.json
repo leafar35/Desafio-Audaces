@@ -1,0 +1,12 @@
+{
+    "type": "mongodb",
+    "host": "172.27.0.2",
+    "port": 27017,
+    "username": "audaces",
+    "password": "audaces1",
+    "database": "marketplace",
+    "synchronize": false,
+    "entities": [
+      "'/**/*.model{.ts,.js}'"
+    ]
+  }

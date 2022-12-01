@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+
+  nestjsapp:
+    build:
+      context: .
+      dockerfile: dockerfile
+    container_name: nestjsapp
+    user: "node"
+    volumes:
+      - ./:/home/audaces
+    expose:
+      - "5001"
+    environment:
+      - COMPOSE_PROJECT_NAME
+    tty: true
